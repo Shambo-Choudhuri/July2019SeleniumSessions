@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Demo Regression Suite]" parallel="classes">
+  <listeners>
+    <listener class-name="com.qa.hubspot.listeners.MyRetryListener"/>
+  </listeners>
+  <test thread-count="2" name="Regression Test(failed)" parallel="classes">
+    <classes>
+      <class name="TestNGSessions.DemoRetryTest">
+        <methods>
+          <include name="test2"/>
+          <include name="test1"/>
+        </methods>
+      </class> <!-- TestNGSessions.DemoRetryTest -->
+    </classes>
+  </test> <!-- Regression Test(failed) -->
+</suite> <!-- Failed suite [Demo Regression Suite] -->

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Demo Regression Suite" parallel="classes" thread-count="2">
+
+<listeners>
+  		
+  		<listener class-name="com.qa.hubspot.listeners.MyRetryListener"/>
+  
+  </listeners>
+  
+  <test name="Regression Test" verbose="2">
+  
+  
+   
+    <classes>
+      
+      <class name="TestNGSessions.DemoRetryTest"/>
+      
+      <!-- <class name="TestNGSessions.InvocationCountDemo"/> -->
+      
+      <!-- <class name="TestNGSessions.DependsOnMethodDemo"/> -->
+    
+    </classes>
+  
+  </test>
+
+</suite> 
